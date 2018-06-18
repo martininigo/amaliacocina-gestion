@@ -1,4 +1,6 @@
-import { Receta } from '../receta';
+import {RECETAS} from '../mock-recetas';
+import {Receta} from '../receta';
+import {RecetaService} from '../receta.service';
 import {Component, OnInit} from '@angular/core';
 
 @Component({
@@ -8,15 +10,20 @@ import {Component, OnInit} from '@angular/core';
 })
 export class RecetasComponent implements OnInit {
 
-  receta: Receta = {
-    id: 1,
-    nombre: 'Azucar',
-    descripcion: 'Azucar!!!'
-  };
+  recetas: Receta[];
+  selectedReceta: Receta;
 
-  constructor() {}
+  constructor(private recetaService: RecetaService) {}
 
   ngOnInit() {
+    this.getRecetas();
   }
 
+  onSelect(receta: Receta): void {
+    this.selectedReceta = receta;
+  }
+
+  getRecetas(): void {
+    this.recetaService.getRecetas().subscribe(recetas => this.recetas = recetas);
+  }
 }
