@@ -1,5 +1,10 @@
-<div>
-    <label>name:
-      <input [(ngModel)]="receta.nombre" placeholder="nombre">
-    </label>
-</div>
+<h2>RECETAS</h2>
+
+<ul class="recetas">
+	<li *ngFor="let receta of recetas">
+		<a routerLink="/detail/{{receta.id}}">
+			<span class="badge">{{receta.id}}</span>
+			{{receta.nombre}}
+		</a>
+	</li>
+</ul>
