@@ -5,9 +5,13 @@ import {FormsModule} from '@angular/forms';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './/app-routing.module';
 import {RecetasComponent} from './recetas/recetas.component';
-import { RecetaDetalleComponent } from './receta-detalle/receta-detalle.component';
-import { MessagesComponent } from './messages/messages.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import {RecetaDetalleComponent} from './receta-detalle/receta-detalle.component';
+import {MessagesComponent} from './messages/messages.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {HttpClientModule} from '@angular/common/http';
+import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
+import {InMemoryDataService} from './in-memory-data.service';
+import { RecetaSearchComponent } from './receta-search/receta-search.component';
 
 @NgModule({
   declarations: [
@@ -15,13 +19,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     RecetasComponent,
     RecetaDetalleComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    RecetaSearchComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, {dataEncapsulation: false})],
   providers: [],
   bootstrap: [AppComponent]
 })

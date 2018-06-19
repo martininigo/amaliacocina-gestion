@@ -29,4 +29,8 @@ export class RecetaDetalleComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+
+  save(): void {
+    this.recetaService.updateReceta(this.receta).subscribe(() => this.goBack());
+  }
 }
