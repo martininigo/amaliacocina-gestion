@@ -11,7 +11,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {InMemoryDataService} from './in-memory-data.service';
-import { RecetaSearchComponent } from './receta-search/receta-search.component';
+import {RecetaSearchComponent} from './receta-search/receta-search.component';
 
 @NgModule({
   declarations: [
@@ -26,9 +26,10 @@ import { RecetaSearchComponent } from './receta-search/receta-search.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, {dataEncapsulation: false})],
+    HttpClientModule
+//    ,HttpClientInMemoryWebApiModule.forRoot(
+//      InMemoryDataService, {dataEncapsulation: false})
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

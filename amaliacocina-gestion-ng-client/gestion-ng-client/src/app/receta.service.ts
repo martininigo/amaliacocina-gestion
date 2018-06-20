@@ -19,7 +19,7 @@ export class RecetaService {
 
   constructor(private http: HttpClient, private messageService: MessageService) {}
 
-  private recetasUrl = 'api/recetas'
+  private recetasUrl = 'http://localhost:8080/ingredientes';
 
 
   private log(message: string) {
@@ -55,7 +55,9 @@ export class RecetaService {
   }
 
   updateReceta(receta: Receta): Observable<any> {
-    return this.http.put(this.recetasUrl, receta, httpOptions).pipe(
+    const id = typeof receta === 'number' ? receta : receta.id;
+    const url = `${this.recetasUrl}/${id}`;
+    return this.http.post(url, receta, httpOptions).pipe(
       tap(_ => this.log('actualizando receta id= ${receta.id}')),
       catchError(this.handleError<any>('updateReceta')));
   }
