@@ -1,4 +1,4 @@
-package com.amaliacocina.gestion.recetas.model;
+package com.amaliacocina.gestion.productos.model;
 
 import java.io.Serializable;
 

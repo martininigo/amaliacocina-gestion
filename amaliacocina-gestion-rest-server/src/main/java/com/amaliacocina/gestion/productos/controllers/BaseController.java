@@ -1,4 +1,4 @@
-package com.amaliacocina.gestion.recetas.controllers;
+package com.amaliacocina.gestion.productos.controllers;
 
 import java.util.Collection;
 
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.amaliacocina.gestion.recetas.model.BaseModel;
-import com.amaliacocina.gestion.recetas.repositories.BaseRepository;
+import com.amaliacocina.gestion.productos.model.BaseModel;
+import com.amaliacocina.gestion.productos.repositories.BaseRepository;
 
 public abstract class BaseController<T extends BaseModel> {
 

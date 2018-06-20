@@ -1,4 +1,4 @@
-package com.amaliacocina.gestion.recetas.config;
+package com.amaliacocina.gestion.config;
 
 //@Configuration
 //@EnableTransactionManagement

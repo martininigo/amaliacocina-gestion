@@ -1,4 +1,4 @@
-package com.amaliacocina.gestion.recetas.config;
+package com.amaliacocina.gestion.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
