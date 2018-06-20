@@ -6,6 +6,6 @@ import com.amaliacocina.gestion.recetas.model.Ingrediente;
 
 public interface IngredientesRepository extends BaseRepository<Ingrediente> {
 
-	Collection<Ingrediente> findByName(String name);
+//	Collection<Ingrediente> findByNombre(String nombre);
 
 }
