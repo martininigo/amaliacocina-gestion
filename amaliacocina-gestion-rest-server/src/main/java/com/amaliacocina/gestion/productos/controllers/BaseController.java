@@ -1,7 +1,6 @@
 package com.amaliacocina.gestion.productos.controllers;
 
 import java.util.Collection;
-import java.util.List;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.HttpStatus;
@@ -26,8 +25,7 @@ public abstract class BaseController<T extends BaseModel> {
 
 	@GetMapping
 	public Collection<T> findAll() {
-		List<T> findAll = this.repository.findAll();
-		return findAll;
+		return this.repository.findAll();
 	}
 
 	@PostMapping

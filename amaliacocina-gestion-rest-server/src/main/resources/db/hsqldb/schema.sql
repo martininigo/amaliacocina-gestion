@@ -14,7 +14,11 @@ CREATE INDEX INSUMOS_NOMBRE ON INSUMOS (nombre);
 CREATE TABLE RECETAS (
   id INTEGER IDENTITY PRIMARY KEY,
   nombre VARCHAR(30),
-  descripcion VARCHAR(100)
+  descripcion VARCHAR(100),
+  pasos VARCHAR(2000),
+  tiempo_horno INTEGER,
+  temperatura_horno INTEGER,
+  tecnica VARCHAR(100)
 );
 CREATE INDEX RECETAS_NOMBRE ON RECETAS (nombre);
 
