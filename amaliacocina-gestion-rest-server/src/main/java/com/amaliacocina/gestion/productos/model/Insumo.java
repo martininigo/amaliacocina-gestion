@@ -9,26 +9,23 @@ import com.amaliacocina.gestion.productos.model.Constantes.UnidadMedida;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name="INSUMOS")
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class Insumo extends DescribibleModel{
+@Table(name = "INSUMOS")
+@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
+public class Insumo extends DescribibleModel {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -2711384505356806912L;
-	
+
 	@Enumerated
-	@Column(name="unidad")
+	@Column(name = "unidad")
 	private UnidadMedida unidad;
-	
-	@Column(name="cantidad")
+
+	@Column(name = "cantidad")
 	private float cantidad;
-	
-	@Column(name="precio")
+
+	@Column(name = "precio")
 	private float precio;
-	
-	@Column(name="es_ingrediente")
+
+	@Column(name = "es_ingrediente")
 	private boolean esIngrediente;
 
 	public UnidadMedida getUnidad() {
