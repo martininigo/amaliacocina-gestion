@@ -10,10 +10,10 @@ import com.amaliacocina.gestion.productos.repositories.BaseRepository;
 @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @RestController
 @RequestMapping("/recetas")
-public class RecetassController extends BaseController<Receta> {
+public class RecetasController extends BaseController<Receta> {
 
 
-	public RecetassController(BaseRepository<Receta> repository) {
+	public RecetasController(BaseRepository<Receta> repository) {
 		super(repository);
 	}
 }

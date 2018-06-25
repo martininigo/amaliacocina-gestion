@@ -4,6 +4,4 @@ import com.amaliacocina.gestion.productos.model.Receta;
 
 public interface RecetasRepository extends BaseRepository<Receta> {
 
-//	Collection<Ingrediente> findByNombre(String nombre);
-
 }

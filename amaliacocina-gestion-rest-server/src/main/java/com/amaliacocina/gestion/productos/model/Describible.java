@@ -4,11 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
-public class DescribibleModel extends BaseModel{
+public abstract class Describible extends BaseModel{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -3980369502107105121L;
 	
 	@Column(name="nombre")

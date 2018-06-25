@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
-public class Proporcionable<T extends BaseModel, T2 extends BaseModel> implements Serializable {
+public abstract class Proporcionable<T extends BaseModel, T2 extends BaseModel> implements Serializable {
 
 	private static final long serialVersionUID = -289253491837738922L;
 

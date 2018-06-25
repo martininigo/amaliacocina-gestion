@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Entity
 @Table(name = "INSUMOS")
 @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
-public class Insumo extends DescribibleModel {
+public class Insumo extends Describible {
 
 	private static final long serialVersionUID = -2711384505356806912L;
 

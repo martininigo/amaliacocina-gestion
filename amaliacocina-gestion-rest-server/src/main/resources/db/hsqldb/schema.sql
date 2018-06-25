@@ -22,7 +22,32 @@ CREATE TABLE RECETAS (
 );
 CREATE INDEX RECETAS_NOMBRE ON RECETAS (nombre);
 
+CREATE TABLE PRODUCTOS (
+  id INTEGER IDENTITY PRIMARY KEY,
+  nombre VARCHAR(30),
+  descripcion VARCHAR(100)
+);
+CREATE INDEX PRODUCTOS_NOMBRE ON RECETAS (nombre);
+
 CREATE TABLE INSUMOS_RECETA (
+  fk_contenedor INTEGER,
+  fk_elemento INTEGER,
+  proporcion FLOAT
+);
+
+CREATE TABLE INSUMOS_PRODUCTO (
+  fk_contenedor INTEGER,
+  fk_elemento INTEGER,
+  proporcion FLOAT
+);
+
+CREATE TABLE INGREDIENTES_PRODUCTO (
+  fk_contenedor INTEGER,
+  fk_elemento INTEGER,
+  proporcion FLOAT
+);
+
+CREATE TABLE RECETAS_PRODUCTO (
   fk_contenedor INTEGER,
   fk_elemento INTEGER,
   proporcion FLOAT

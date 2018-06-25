@@ -10,12 +10,10 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
-public class BaseModel implements Serializable {
+public abstract class BaseModel implements Serializable {
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -7874678818821026884L;
+
 	@Id  
     @GeneratedValue(strategy = GenerationType.IDENTITY)  
     @Basic(optional = false)  
