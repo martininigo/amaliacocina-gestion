@@ -19,7 +19,7 @@ export class RecetaService {
 
   constructor(private http: HttpClient, private messageService: MessageService) {}
 
-  private recetasUrl = 'http://localhost:8080/ingredientes';
+  private recetasUrl = 'http://localhost:8080/recetas';
 
 
   private log(message: string) {
