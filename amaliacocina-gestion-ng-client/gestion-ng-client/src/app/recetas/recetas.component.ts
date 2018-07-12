@@ -20,17 +20,17 @@ export class RecetasComponent implements OnInit {
   }
 
   getRecetas(): void {
-    this.recetaService.getRecetas().subscribe(recetas => this.recetas = recetas);
+    this.recetaService.getAll().subscribe(recetas => this.recetas = recetas);
   }
 
   add(nombre: string): void {
     nombre = nombre.trim();
     if (!nombre) {return;}
-    this.recetaService.addReceta({nombre} as Receta).subscribe(receta => {this.recetas.push(receta);});
+    this.recetaService.add({nombre} as Receta).subscribe(receta => {this.recetas.push(receta);});
   }
 
   delete(receta: Receta): void {
     this.recetas = this.recetas.filter(h => h !== receta);
-    this.recetaService.deleteReceta(receta).subscribe();
+    this.recetaService.delete(receta).subscribe();
   }
 }

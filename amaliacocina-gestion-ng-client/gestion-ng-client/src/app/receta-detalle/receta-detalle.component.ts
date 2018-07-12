@@ -22,7 +22,7 @@ export class RecetaDetalleComponent implements OnInit {
 
   getReceta(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.recetaService.getReceta(id)
+    this.recetaService.get(id)
       .subscribe(receta => this.receta = receta);
   }
 
@@ -31,6 +31,6 @@ export class RecetaDetalleComponent implements OnInit {
   }
 
   save(): void {
-    this.recetaService.updateReceta(this.receta).subscribe(() => this.goBack());
+    this.recetaService.update(this.receta).subscribe(() => this.goBack());
   }
 }

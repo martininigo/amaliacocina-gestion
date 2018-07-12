@@ -12,6 +12,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {InMemoryDataService} from './in-memory-data.service';
 import {RecetaSearchComponent} from './receta-search/receta-search.component';
+import { InsumosComponent } from './insumos/insumos.component';
+import { InsumoComponent } from './insumos/insumo/insumo.component';
+import { InsumoListComponent } from './insumos/insumo-list/insumo-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import {RecetaSearchComponent} from './receta-search/receta-search.component';
     RecetaDetalleComponent,
     MessagesComponent,
     DashboardComponent,
-    RecetaSearchComponent
+    RecetaSearchComponent,
+    InsumosComponent,
+    InsumoComponent,
+    InsumoListComponent
   ],
   imports: [
     BrowserModule,

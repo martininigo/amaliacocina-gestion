@@ -14,7 +14,7 @@ export class RecetaSearchComponent implements OnInit {
   recetas$: Observable<Receta[]>;
   private searchTerms = new Subject<string>();
 
-  constructor(private heroService: RecetaService) {}
+  constructor(private recetaService: RecetaService) {}
 
   search(term: string): void {
     this.searchTerms.next(term);
@@ -29,7 +29,7 @@ export class RecetaSearchComponent implements OnInit {
       distinctUntilChanged(),
 
       // switch to new search observable each time the term changes
-      switchMap((term: string) => this.heroService.searchRecetas(term)),
+      switchMap((term: string) => this.recetaService.search(term)),
     );
   }
 }

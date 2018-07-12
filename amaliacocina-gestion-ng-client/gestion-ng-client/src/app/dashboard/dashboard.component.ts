@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
   }
 
   getRecetas(): void {
-    this.recetaService.getRecetas().subscribe(recetas => this.recetas = recetas.slice(1, 5));
+    this.recetaService.getAll().subscribe(recetas => this.recetas = recetas.slice(1, 5));
   }
 
 }
