@@ -10,6 +10,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 public class RecetaProducto extends Proporcionable<Producto, Receta>{
 
-	private static final long serialVersionUID = 2169424239198155766L;
+	private static final long serialVersionUID = 6460411928504234834L;
 
 }

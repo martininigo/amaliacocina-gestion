@@ -11,4 +11,5 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class InsumoProducto extends Proporcionable<Producto, Insumo>{
 
 	private static final long serialVersionUID = 4845932107298969716L;
+
 }
