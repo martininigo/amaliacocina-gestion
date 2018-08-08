@@ -4,7 +4,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.amaliacocina.gestion.productos.model.Insumo;
 import com.amaliacocina.gestion.productos.model.Producto;
 import com.amaliacocina.gestion.productos.repositories.BaseRepository;
 
