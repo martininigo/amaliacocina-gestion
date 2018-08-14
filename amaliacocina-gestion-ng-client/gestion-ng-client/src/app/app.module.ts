@@ -5,13 +5,13 @@ import {FormsModule} from '@angular/forms';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './/app-routing.module';
 import {RecetasComponent} from './recetas/recetas.component';
-import {RecetaDetalleComponent} from './receta-detalle/receta-detalle.component';
+import {RecetaComponent} from './recetas/receta/receta.component';
 import {MessagesComponent} from './messages/messages.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
-import {InMemoryDataService} from './in-memory-data.service';
-import {RecetaSearchComponent} from './receta-search/receta-search.component';
+import {InMemoryDataService} from './shared/in-memory-data.service';
+import {RecetaSearchComponent} from './recetas/receta-search/receta-search.component';
 import { InsumosComponent } from './insumos/insumos.component';
 import { InsumoComponent } from './insumos/insumo/insumo.component';
 import { InsumoListComponent } from './insumos/insumo-list/insumo-list.component';
@@ -20,7 +20,7 @@ import { InsumoListComponent } from './insumos/insumo-list/insumo-list.component
   declarations: [
     AppComponent,
     RecetasComponent,
-    RecetaDetalleComponent,
+    RecetaComponent,
     MessagesComponent,
     DashboardComponent,
     RecetaSearchComponent,

@@ -1,8 +1,9 @@
-import {GenericService} from './shared/generic.service';
-import {MessageService} from './message.service';
+import {GenericService} from '../../shared/generic.service';
+import {MessageService} from '../../shared/message.service';
 import {HttpHeaders} from '@angular/common/http';
 import {HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
+import {Receta} from './receta.model';
 
 
 @Injectable({

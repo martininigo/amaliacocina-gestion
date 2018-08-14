@@ -1,6 +1,5 @@
-import {RECETAS} from '../mock-recetas';
-import {Receta} from '../receta';
-import {RecetaService} from '../receta.service';
+import {Receta} from './shared/receta.model';
+import {RecetaService} from './shared/receta.service';
 import {Component, OnInit} from '@angular/core';
 
 @Component({
