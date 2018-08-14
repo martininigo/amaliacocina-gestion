@@ -1,15 +1,15 @@
-import {Receta} from '../receta';
-import {RecetaService} from '../receta.service';
+import {Receta} from '../shared/receta.model';
+import {RecetaService} from '../shared/receta.service';
 import {Component, OnInit, Input} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-receta-detalle',
-  templateUrl: './receta-detalle.component.html',
-  styleUrls: ['./receta-detalle.component.css']
+  templateUrl: './receta.component.html',
+  styleUrls: ['./receta.component.css']
 })
-export class RecetaDetalleComponent implements OnInit {
+export class RecetaComponent implements OnInit {
 
   @Input() receta: Receta;
   constructor(private route: ActivatedRoute,

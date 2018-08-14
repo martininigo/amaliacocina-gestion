@@ -47,7 +47,7 @@ export class GenericService<T extends GenericModel> {
   }
 
   update(entity: T): Observable<any> {
-    const id = typeof entity === 'number' ? entity: entity.id;
+    const id = typeof entity === 'number' ? entity : entity.id;
     const url = `${this.url}/${id}`;
     return this.http.post(url, entity, httpOptions).pipe(
       tap(_ => this.log('actualizando entidad id= ${entity.id}')),

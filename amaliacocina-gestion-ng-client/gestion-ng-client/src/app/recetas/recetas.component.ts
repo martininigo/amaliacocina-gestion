@@ -1,6 +1,5 @@
-import {RECETAS} from '../mock-recetas';
-import {Receta} from '../receta';
-import {RecetaService} from '../receta.service';
+import {Receta} from './shared/receta.model';
+import {RecetaService} from './shared/receta.service';
 import {Component, OnInit} from '@angular/core';
 
 @Component({
@@ -25,8 +24,8 @@ export class RecetasComponent implements OnInit {
 
   add(nombre: string): void {
     nombre = nombre.trim();
-    if (!nombre) {return;}
-    this.recetaService.add({nombre} as Receta).subscribe(receta => {this.recetas.push(receta);});
+    if (!nombre) {return; }
+    this.recetaService.add({nombre} as Receta).subscribe(receta => {this.recetas.push(receta); });
   }
 
   delete(receta: Receta): void {
