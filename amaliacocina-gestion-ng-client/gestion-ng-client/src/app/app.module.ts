@@ -16,6 +16,7 @@ import { InsumosComponent } from './insumos/insumos.component';
 import { InsumoComponent } from './insumos/insumo/insumo.component';
 import { InsumoListComponent } from './insumos/insumo-list/insumo-list.component';
 import { InsumoTableComponent } from './insumos/insumo-table/insumo-table.component';
+import { RecetaTableComponent } from './recetas/receta-table/receta-table.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { InsumoTableComponent } from './insumos/insumo-table/insumo-table.compon
     InsumosComponent,
     InsumoComponent,
     InsumoListComponent,
-    InsumoTableComponent
+    InsumoTableComponent,
+    RecetaTableComponent
   ],
   imports: [
     BrowserModule,
