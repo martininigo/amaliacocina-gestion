@@ -17,6 +17,7 @@ import { InsumoComponent } from './insumos/insumo/insumo.component';
 import { InsumoListComponent } from './insumos/insumo-list/insumo-list.component';
 import { InsumoTableComponent } from './insumos/insumo-table/insumo-table.component';
 import { RecetasTableComponent } from './recetas/recetas-table/recetas-table.component';
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { RecetasTableComponent } from './recetas/recetas-table/recetas-table.com
   ],
   imports: [
     BrowserModule,
+    AgGridModule.withComponents([]),
     FormsModule,
     AppRoutingModule,
     HttpClientModule
