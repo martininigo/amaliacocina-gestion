@@ -1,27 +1,30 @@
 package com.amaliacocina.gestion.productos.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class Constantes {
 
-	@JsonFormat(shape = JsonFormat.Shape.OBJECT)
 	public enum UnidadMedida {
-		UNIDAD("Unidad", "u"), MILILITROS("Mililitros", "ml"), GRAMOS("Gramos", "gr");
+		UNIDAD("u"), MILILITROS("ml"), GRAMOS("gr");
 
-		private final String nombre;
 		private final String acronimo;
 
-		UnidadMedida(String nombre, String acronimo) {
-			this.nombre = nombre;
+		UnidadMedida(String acronimo) {
 			this.acronimo = acronimo;
 		}
 
-		public String getNombre() {
-			return nombre;
-		}
-
+		@JsonValue
 		public String getAcronimo() {
 			return acronimo;
+		}
+
+		public static UnidadMedida fromValue(String acronimo) {
+			for (UnidadMedida unidadMedida : values()) {
+				if (unidadMedida.acronimo.equalsIgnoreCase(acronimo)) {
+					return unidadMedida;
+				}
+			}
+			throw new IllegalArgumentException("La unidad de medida " + acronimo + " no existe");
 		}
 	}
 }
