@@ -9,6 +9,8 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./insumos-table.component.css']
 })
 export class InsumosTableComponent implements OnInit {
+	
+	insumo: Insumo;
 
 	  constructor(private route: ActivatedRoute,
 			  private insumoService: InsumoService) {}
@@ -28,9 +30,14 @@ export class InsumosTableComponent implements OnInit {
 	  }
 
 	  onRowEditingStopped(event) {
-		  var insumo: Insumo = event.data;
-		  this.insumoService.update(insumo);
-		  window.alert("row ");
-		  }
+	  
+		    this.insumoService.update(event.data)
+            .subscribe(
+                savedInsumo => {
+                    console.log('Insumo Saved');
+                },
+                error => console.log(error)
+            )
+	  }
 
 	}

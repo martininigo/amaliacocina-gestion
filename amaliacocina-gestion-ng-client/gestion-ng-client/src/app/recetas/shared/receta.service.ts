@@ -5,7 +5,6 @@ import {HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {Receta} from './receta.model';
 
-
 @Injectable({
     providedIn: 'root'
     })

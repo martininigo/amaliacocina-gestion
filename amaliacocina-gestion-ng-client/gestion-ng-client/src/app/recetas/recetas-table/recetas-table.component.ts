@@ -9,19 +9,23 @@ import {RecetaService} from '../shared/receta.service';
 })
 export class RecetasTableComponent implements OnInit {
 
-	  constructor(private recetaService: RecetaService) {}
+  constructor(private recetaService: RecetaService) {}
   
   columnDefs = [
-      {headerName: 'Id', field: 'id',checkboxSelection: true  },
-      {headerName: 'Nombre', field: 'nombre' },
-      {headerName: 'Descripción', field: 'descripcion'}
-      {headerName: 'Tiempo de Horno', field: 'tiempoHorno' },
+      {headerName: 'Nombre', field: 'nombre', editable: true },
+      {headerName: 'Descripción', field: 'descripcion', editable: true },
+      {headerName: 'Tiempo de Horno', field: 'tiempoHorno', editable: true }
   ];
 
+  editType = "fullRow"
   rowData: any;  
-
   ngOnInit() {
 	  this.rowData = this.recetaService.getAll();
   }
+
+  onRowEditingStopped(event) {
+	  this.recetaService.update(event.data);
+	    window.alert("row ");
+	  }
 
 }

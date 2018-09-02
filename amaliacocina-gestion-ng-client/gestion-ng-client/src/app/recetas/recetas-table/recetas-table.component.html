@@ -1,7 +1,6 @@
-<p>
-  receta-table works!
-</p>
-
+<div class="page-header">
+<h1>RECETAS</h1>
+</div>
 <ag-grid-angular 
     style="width: 100%; height: 500px;" 
     class="ag-theme-balham"
@@ -9,6 +8,7 @@
     [enableFilter]="true"
     [rowData]="rowData | async" 
     [columnDefs]="columnDefs"
-    rowSelection="multiple"
+    [editType]="editType"
+    (rowEditingStopped)="onRowEditingStopped($event)"
     >
 </ag-grid-angular>
