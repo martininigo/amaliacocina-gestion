@@ -18,6 +18,9 @@ import { InsumoListComponent } from './insumos/insumo-list/insumo-list.component
 import { InsumosTableComponent } from './insumos/insumos-table/insumos-table.component';
 import { RecetasTableComponent } from './recetas/recetas-table/recetas-table.component';
 import { AgGridModule } from 'ag-grid-angular';
+import {CheckboxEditorComponent} from "./shared/components/checkbox-editor.component";
+import {CheckboxRendererComponent} from './shared/components/checkbox-renderer.component';
+import {ButtonsRenderComponent} from './shared/components/buttons-render.component';
 
 @NgModule({
   declarations: [
@@ -31,11 +34,14 @@ import { AgGridModule } from 'ag-grid-angular';
     InsumoComponent,
     InsumoListComponent,
     InsumosTableComponent,
-    RecetasTableComponent
+    RecetasTableComponent,
+    CheckboxEditorComponent,
+    CheckboxRendererComponent,
+    ButtonsRenderComponent
   ],
   imports: [
     BrowserModule,
-    AgGridModule.withComponents([]),
+    AgGridModule.withComponents([CheckboxEditorComponent, CheckboxRendererComponent, ButtonsRenderComponent]),
     FormsModule,
     AppRoutingModule,
     HttpClientModule

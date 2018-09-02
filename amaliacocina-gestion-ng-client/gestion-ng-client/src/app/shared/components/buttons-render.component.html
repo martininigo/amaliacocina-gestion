@@ -1,0 +1,20 @@
+<span *ngIf="!isEditMode" 
+	class="glyphicon glyphicon-pencil rowButton editButton" 
+	(click)="onBtEditRow()" 
+	>
+</span>
+<span *ngIf="!isEditMode" 
+	class="glyphicon glyphicon-trash rowButton editButton" 
+	(click)="onBtEditRow()" 
+	>
+</span>
+<span *ngIf="isEditMode" 
+	class="glyphicon glyphicon-ok rowButton okButton" 
+	(click)="onBtOkEditRow()" 
+	>
+</span>
+<span *ngIf="isEditMode" 
+	class="glyphicon glyphicon-remove rowButton cancelButton" 
+	(click)="onBtCancelEditRow()" 
+	>
+</span>

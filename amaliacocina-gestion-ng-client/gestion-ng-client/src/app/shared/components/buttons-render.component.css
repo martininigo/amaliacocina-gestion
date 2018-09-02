@@ -1,0 +1,24 @@
+.rowButton{
+	cursor: pointer;
+	padding-right: 5px;
+}
+
+.editButton{
+	color: #438EB9;
+}
+
+.okButton{
+	color: #00cc00;
+}
+
+.cancelButton{
+	color: red;
+}
+
+.buttonActive{
+	visibility: visible;
+}
+
+.buttonInactive{
+	visibility: hidden;
+}

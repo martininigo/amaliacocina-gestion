@@ -3,6 +3,7 @@ export class Insumo {
 	nombre: string;
 	descripcion: string;
 	unidad: string;
+	cantidad: number;
 	precio: number;
 	esIngrediente: boolean;
 }

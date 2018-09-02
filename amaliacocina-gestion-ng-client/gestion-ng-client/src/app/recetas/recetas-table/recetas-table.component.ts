@@ -28,4 +28,7 @@ export class RecetasTableComponent implements OnInit {
 	    window.alert("row ");
 	  }
 
+  onBtStartRow(){
+	  window.alert(this.params.api.focusedCellController.focusedCell.rowIndex);
+  }
 }

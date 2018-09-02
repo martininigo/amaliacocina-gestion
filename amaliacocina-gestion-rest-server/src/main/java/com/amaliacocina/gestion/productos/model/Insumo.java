@@ -19,6 +19,9 @@ public class Insumo extends Describible {
 	@Column(name = "unidad")
 	private UnidadMedida unidad;
 
+//	@Column(name = "unidad")
+//	private int unidad;
+
 	@Column(name = "cantidad")
 	private float cantidad;
 
