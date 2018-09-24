@@ -57,11 +57,4 @@ export class InsumosTableComponent implements OnInit {
                 error => console.log(error)
             )
 	  }
-	  
-	  onGridReady(params) {
-		    this.gridApi = params.api;
-		    this.gridColumnApi = params.columnApi;
-
-		    params.api.sizeColumnsToFit();
-		  }
-	}
+}
