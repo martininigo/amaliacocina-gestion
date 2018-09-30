@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InsumoTableComponent } from './insumo-table.component';
+import { InsumosButtonsRenderComponent } from './insumos-buttons-render.component';
 
-describe('InsumoTableComponent', () => {
-  let component: InsumoTableComponent;
-  let fixture: ComponentFixture<InsumoTableComponent>;
+describe('InsumosButtonsRenderComponent', () => {
+  let component: InsumosButtonsRenderComponent;
+  let fixture: ComponentFixture<InsumosButtonsRenderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InsumoTableComponent ]
+      declarations: [ InsumosButtonsRenderComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InsumoTableComponent);
+    fixture = TestBed.createComponent(InsumosButtonsRenderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

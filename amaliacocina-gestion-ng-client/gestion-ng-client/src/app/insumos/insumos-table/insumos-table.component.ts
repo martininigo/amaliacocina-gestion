@@ -4,7 +4,7 @@ import {InsumoService} from '../shared/insumo.service';
 import {ActivatedRoute} from '@angular/router';
 import {CheckboxEditorComponent} from "../../shared/components/checkbox-editor.component";
 import {CheckboxRendererComponent} from "../../shared/components/checkbox-renderer.component";
-import {ButtonsRenderComponent} from "../../shared/components/buttons-render.component";
+import {InsumosButtonsRenderComponent} from "./insumos-buttons-render.component";
 
 enum UnidadMedida {
     GR ='gr' ,
@@ -29,7 +29,7 @@ export class InsumosTableComponent implements OnInit {
 	  
 	  columnDefs = [
 	      {headerName: 'Acciones', editable: false, 
-              cellRendererFramework: ButtonsRenderComponent},
+              cellRendererFramework: InsumosButtonsRenderComponent},
 	      {headerName: 'Nombre', field: 'nombre', editable: true },
 	      {headerName: 'Descripción', field: 'descripcion', editable: true },
 	      {headerName: 'Unidad', field: 'unidad', editable: true, cellEditor: "agSelectCellEditor",
@@ -48,13 +48,6 @@ export class InsumosTableComponent implements OnInit {
 	  }
 
 	  onRowEditingStopped(event) {
-	  
-		    this.insumoService.update(event.data)
-            .subscribe(
-                savedInsumo => {
-                    console.log('Insumo Saved');
-                },
-                error => console.log(error)
-            )
+		  event.api.stopEditing(true);
 	  }
 }
