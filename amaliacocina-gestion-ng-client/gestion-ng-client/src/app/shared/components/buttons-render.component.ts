@@ -35,6 +35,7 @@ export class ButtonsRenderComponent<T extends GenericModel, T2 extends GenericSe
             colKey: this.params.column.columnApi.columnController.allDisplayedColumns[1].colDef.field
           });
     }
+    
     onBtOkEditRow(){
     	this.isEditMode = false;
     	this.gridApi.stopEditing();
@@ -46,6 +47,7 @@ export class ButtonsRenderComponent<T extends GenericModel, T2 extends GenericSe
                 error => console.log(error)
             )
     }
+    
     onBtCancelEditRow(){
     	this.isEditMode = false;
     	this.gridApi.stopEditing(true);

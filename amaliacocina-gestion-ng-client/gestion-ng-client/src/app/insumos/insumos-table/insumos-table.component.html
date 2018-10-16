@@ -13,5 +13,11 @@
     [suppressClickEdit]="true"
 	rowSelection="multiple"
     (rowEditingStopped)="onRowEditingStopped($event)"
+    (gridReady)="onGridReady($event)"
     >
 </ag-grid-angular>
+<span 
+	class="glyphicon glyphicon-plus button"
+	(click)="onAddRow()" 
+	>
+</span>
