@@ -11,6 +11,7 @@ import {GenericModel} from '../generic.model'
 export class ButtonsRenderComponent<T extends GenericModel, T2 extends GenericService<T>> implements ICellRendererAngularComp {
     public params: any;
 	public isEditMode = false;
+	public isAddMode = false;
 	private gridApi;
 
     agInit(params: any): void {
@@ -28,6 +29,11 @@ export class ButtonsRenderComponent<T extends GenericModel, T2 extends GenericSe
         return false;
     }
     
+    onBtAddRow(){
+    	this.isAddMode = true;
+    	this.onBtEditRow();
+    }
+    
     onBtEditRow(){
     	this.isEditMode = true;
     	this.gridApi.startEditingCell({
@@ -39,13 +45,24 @@ export class ButtonsRenderComponent<T extends GenericModel, T2 extends GenericSe
     onBtOkEditRow(){
     	this.isEditMode = false;
     	this.gridApi.stopEditing();
-    	this.service.update(this.params.data)
+    	if (this.isAddMode) {
+    		this.isAddMode = false;
+	    	this.service.add(this.params.data)
             .subscribe(
                 savedElemento => {
-                    console.log('Elemento Guardado');
+                    console.log('Elemento Agregado');
                 },
                 error => console.log(error)
             )
+    	} else {
+	    	this.service.update(this.params.data)
+	            .subscribe(
+	                savedElemento => {
+	                    console.log('Elemento Guardado');
+	                },
+	                error => console.log(error)
+	            )
+    	}
     }
     
     onBtCancelEditRow(){

@@ -60,7 +60,7 @@ export class InsumosTableComponent implements OnInit {
 		var instances = this.gridApi.getCellRendererInstances(params);
 		firstRowNode.setSelected(true);
 		var framework = instances[0].getFrameworkComponentInstance();
-		framework.onBtEditRow();
+		framework.onBtAddRow();
 //	    this.gridApi.updateRowData({ add: [{}], addIndex: 0 });
 //		this.gridApi.getRowNode(0).setSelected(true);
 	}

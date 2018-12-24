@@ -22,6 +22,7 @@ import {CheckboxEditorComponent} from "./shared/components/checkbox-editor.compo
 import {CheckboxRendererComponent} from './shared/components/checkbox-renderer.component';
 import {ButtonsRenderComponent} from './shared/components/buttons-render.component';
 import {InsumosButtonsRenderComponent} from "./insumos/insumos-table/insumos-buttons-render.component";
+import { InsumoEditComponent } from './insumos/insumo-edit/insumo-edit.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {InsumosButtonsRenderComponent} from "./insumos/insumos-table/insumos-but
     CheckboxEditorComponent,
     CheckboxRendererComponent,
     ButtonsRenderComponent,
-    InsumosButtonsRenderComponent
+    InsumosButtonsRenderComponent,
+    InsumoEditComponent
   ],
   imports: [
     BrowserModule,

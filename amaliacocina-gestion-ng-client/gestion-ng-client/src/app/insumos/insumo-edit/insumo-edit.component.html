@@ -1,0 +1,34 @@
+<div>
+    <div style="display: inline-block">
+        <div style="float: left">
+            Nombre: <input [(ngModel)]="nombre"/>
+        </div>
+        <div style="float: left">
+            Descripcion: <input [(ngModel)]="descripcion"/>
+        </div>
+        <div style="float: left; padding-left: 10px">
+            Unidad:
+            <select [(ngModel)]="uidasd">
+                <option disabled selected>Unidad...</option>
+                <option *ngFor="let unidad of unidades" [ngValue]="unidad">
+                    {{ country.name }}
+                </option>
+            </select>
+        </div>
+    </div>
+    <div>
+        <button (click)="insertNewResult()">Insert New Result</button>
+        <ag-grid-angular style="width: 100%; height: 200px;"
+                         class="ag-fresh"
+                         [columnDefs]="columnDefs"
+                         [rowData]="rowData"
+                         (gridReady)="onGridReady($event)"
+                         (rowValueChanged)="onRowValueChanged($event)">
+        </ag-grid-angular>
+    </div>
+    <div>
+        <button (click)="saveAthlete()" [disabled]="!isValidAthlete()" style="float: right">
+            Save Athlete
+        </button>
+    </div>
+</div>
