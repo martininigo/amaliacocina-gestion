@@ -12,6 +12,6 @@ import {Insumo} from './insumo.model';
 export class InsumoService extends GenericService<Insumo>{
 
     constructor(private http1: HttpClient, private messageService1: MessageService) {
-        super(http1, messageService1, 'http://localhost:8080/insumos');
+        super(http1, messageService1, 'https://192.168.0.6:8443/insumos');
     }
 }
