@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.amaliacocina.gestion.productos.model.Receta;
 import com.amaliacocina.gestion.productos.repositories.BaseRepository;
 
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/recetas")
 public class RecetasController extends BaseController<Receta> {

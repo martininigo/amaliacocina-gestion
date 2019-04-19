@@ -12,6 +12,6 @@ import {Receta} from './receta.model';
 export class RecetaService extends GenericService<Receta> {
 
     constructor(private http1: HttpClient, private messageService1: MessageService) {
-        super(http1, messageService1, 'http://localhost:8080/recetas');
+        super(http1, messageService1, 'https://192.168.0.6:8443/recetas');
     }
 }
